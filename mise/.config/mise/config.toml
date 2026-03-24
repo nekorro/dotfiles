@@ -1,0 +1,16 @@
+[tools]
+# Languages
+rust = "1.94"
+python = "3.14"
+go = "1.26.1"
+
+# Tools
+fzf = "latest"
+ripgrep = "latest"
+fd = "latest"
+eza = "latest"
+stylua = "latest"
+zoxide = "latest"
+bat = "latest"
+
+# mise use -g

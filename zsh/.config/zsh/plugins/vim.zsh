@@ -1,0 +1,1 @@
+plug "zap-zsh/vim"
