@@ -3,6 +3,7 @@
 rust = "1.94"
 python = "3.14"
 go = "1.26.1"
+node = "25.8.2"
 
 # Tools
 fzf = "latest"

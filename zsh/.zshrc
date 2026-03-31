@@ -4,11 +4,11 @@
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
 mkdir -p ~/.zsh/completions
+plug "$HOME/.config/zsh/plugins/mise.zsh"
 
 plug "zap-zsh/supercharge"
 plug "$HOME/.config/zsh/plugins/zoxide.zsh"
 plug "$HOME/.config/zsh/plugins/mcc.zsh"
-plug "$HOME/.config/zsh/plugins/mise.zsh"
 # # plug "$HOME/.config/zsh/plugins/vim.zsh"
 plug "$HOME/.config/wezterm/wezterm.sh"
 plug "$HOME/.config/zsh/plugins/eza.zsh"

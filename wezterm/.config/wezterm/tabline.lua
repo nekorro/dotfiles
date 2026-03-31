@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
-local tabline_theme_dir = os.getenv("HOME") .. "/colorscheme/extras/wezterm_tabline"
+local tabline_theme_dir = os.getenv("HOME") .. "/.config/colorscheme/extras/wezterm_tabline"
 package.path = package.path .. ";" .. tabline_theme_dir .. "/?.lua"
 local tabline_theme = require("kanagawa-paper-ash")
 

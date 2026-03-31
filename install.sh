@@ -41,14 +41,20 @@ install_mise() {
 install_tools() {
 	if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 		sudo apt install zsh
-		# sudo apt install luajit luarocks neovim tree-sitter-cli tldr tv
+		# sudo apt install luajit luarocks neovim tree-sitter-cli tldr television wezterm
 	elif [[ "$OSTYPE" == "darwin"* ]]; then
-		brew install luajit luarocks neovim tree-sitter-cli tldr tv
+		brew install luajit luarocks neovim tree-sitter-cli tldr television wezterm wget karabiner-elements
 	fi
 	[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] || zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 	stow -d "$DOTFILES_DIR" mise -t ~
 	stow -d "$DOTFILES_DIR" wezterm -t ~
+	stow -d "$DOTFILES_DIR" colorscheme -t ~
+	stow -d "$DOTFILES_DIR" nvim -t ~
+	stow -d "$DOTFILES_DIR" karabiner -t ~
+  rm -rf ~/.zshrc
 	stow -d "$DOTFILES_DIR" zsh -t ~
+  rm -rf ~/.config/television
+	stow -d "$DOTFILES_DIR" television -t ~
 	mise install --jobs=1
 }
 
