@@ -1,0 +1,61 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "medium"
+
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
+
+default_permissions = "claude-migrated"
+service_tier = "default"
+
+[features]
+hooks = true
+js_repl = false
+memories = true
+
+[tui]
+status_line = [
+  "model-with-reasoning",
+  "context-remaining",
+  "five-hour-limit",
+  "weekly-limit",
+  "used-tokens",
+  "git-branch",
+  "thread-id",
+  "current-dir",
+]
+
+[tui.keymap.editor]
+insert_newline = ["shift-enter", "ctrl-j"]
+
+[permissions.claude-migrated]
+description = "Global filesystem and network access with secret read denials."
+extends = ":workspace"
+
+[permissions.claude-migrated.filesystem]
+":root" = "read"
+
+[permissions.claude-migrated.filesystem."~"]
+"." = "write"
+"**/.env" = "deny"
+"**/.env.local" = "deny"
+".ssh/id_*" = "deny"
+
+[permissions.claude-migrated.filesystem.":workspace_roots"]
+"**/.env" = "deny"
+"**/.env.local" = "deny"
+
+[permissions.claude-migrated.network]
+enabled = true
+allow_local_binding = true
+dangerously_allow_all_unix_sockets = true
+
+[permissions.claude-migrated.network.domains]
+"*" = "allow"
+
+[mcp_servers.smart-connections]
+command = "/bin/sh"
+args = ["-c", 'exec "$HOME/.codex/mcp/smart-connections.sh"']
+
+[desktop]
+followUpQueueMode = "queue"
+conversationDetailMode = "STEPS_PROSE"

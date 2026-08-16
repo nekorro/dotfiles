@@ -1,0 +1,12 @@
+*
+!.gitignore
+!AGENTS.md
+!config.toml
+!hooks.json
+!hooks/
+!hooks/**
+!mcp/
+!mcp/**
+!skills/
+!skills/commit/
+!skills/commit/**

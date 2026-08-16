@@ -1,0 +1,42 @@
+{
+  "PSSRE-7069": {
+    "path": "intranet/yandex_directory",
+    "name": "Поднять контур для НТ Директории"
+  },
+  "PSSRE-7038": {
+    "path": "yandex360/backend",
+    "name": "Создание/доработка инфракомплекса для Поиска (Почта)"
+  },
+  "PSSRE-7457": {
+    "path": "disk/ps-billing",
+    "name": "Flyway в psbilling"
+  },
+  "PSSRE-7587": {
+    "path": "yandex360/sre/tools/maniac",
+    "name": "Terraform-модуль для управления шардами postgres"
+  },
+  "PSSRE-6743": {
+    "path": "yandex360/sre/tools/maniac",
+    "name": "Инфра и железо для личных контактов"
+  },
+  "PSSRE-7703": {
+    "path": "disk/ps-billing",
+    "name": "Выпилить pgmigrate из миграций биллинга"
+  },
+  "PSSRE-7691": {
+    "path": "yandex360/sre/tools/maniac",
+    "name": "Поднять БД для нового мигратора и инфракомплекс (если надо)"
+  },
+  "PSSRE-7825": {
+    "path": "yandex360/frontend/services",
+    "name": "Создать namespace и робота для сервисов фронтенда диска"
+  },
+  "PSSRE-5725": {
+    "path": "mail/calendar",
+    "name": "Создать кубик в релизе, прогоняющий миграции"
+  },
+  "PSSRE-7476": {
+    "path": "mail/search/mail/tupita",
+    "name": "Принять сервис Тупита в ротацию SRE"
+  }
+}

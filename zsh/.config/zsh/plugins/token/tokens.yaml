@@ -1,0 +1,88 @@
+st:
+  description: StarTrek API
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=5f671d781aca402ab7460fde4050267b
+  path: ~/.config/tokens/startrek
+  envs:
+    - ST_TOKEN
+    - TRACKER_TOKEN
+yt:
+  description: YT
+  oauth_url: https://oauth.yt.yandex.net/new
+  path: ~/.yt/token
+  envs:
+    - YT_TOKEN
+yql:
+  description: YQL
+  oauth_url: https://yq.yandex.net/oauth
+  path: ~/.config/tokens/yql
+  envs:
+    - YQL_TOKEN
+sandbox:
+  description: Sandbox
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=b662b483feff40c1832e42cc1fcbc500
+  path: ~/.config/tokens/sandbox
+  envs:
+    - SANDBOX_TOKEN
+nirvana:
+  description: Nirvana
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=637ca17604cb4dfa90b262952c00b1e9
+  path: ~/.config/tokens/nirvana
+  envs:
+    - NIRVANA_TOKEN
+nanny:
+  description: Nanny
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=17e5c68d01c449c199f653956fb220fe
+  path: ~/.config/tokens/nanny
+  envs:
+    - NANNY_TOKEN
+    - NANNY_SERVICE_MANAGER_TOKEN
+eliza:
+  description: Eliza AI API
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=60c90ec3a2b846bcbf525b0b46baac80
+  path: ~/.config/tokens/eliza
+  envs:
+    - ELIZA_TOKEN
+    - LLM_TOKEN
+    - AI_TOKEN
+yc:
+  description: Yandex Cloud token
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=8cdb2f6a0dca48398c6880312ee2f78d
+  path: ~/.config/tokens/yc
+  envs:
+    - YC_TOKEN
+yp:
+  description: YP token
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=f8446f826a6f4fd581bf0636849fdcd7
+  path: ~/.yp/token
+  envs:
+    - YP_TOKEN
+dctl:
+  description: Y.Deploy token
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=688c92864835447b9ed74221f44420b7
+  path: ~/.dctl/token
+  envs:
+    - DCTL_YP_TOKEN
+juggler:
+  description: Juggler token
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=cd178dcdc31a4ed79f42467f2d89b0d0
+  path: ~/.juggler
+  envs:
+    - JUGGLER_TOKEN
+puncher:
+  description: Puncher token
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=a4b9cc023f7244e8b2c7b4fa47c444a6
+  path: ~/.config/tokens/puncher
+  envs:
+    - PUNCHER_TOKEN
+abc:
+  description: ABC token
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=23db397a10ae4fbcb1a7ab5896dc00f6
+  path: ~/.config/tokens/abc
+  envs:
+    - ABC_TOKEN
+abcd:
+  description: ABCD token
+  oauth_url: https://oauth.yandex-team.ru/authorize?response_type=token&client_id=0e38277ed0e24567a833cdc7e2cb1683
+  path: ~/.d/token
+  envs:
+    - D_TOKEN

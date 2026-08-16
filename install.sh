@@ -46,11 +46,14 @@ install_tools() {
 		brew install luajit luarocks neovim tree-sitter-cli tldr television wezterm wget karabiner-elements
 	fi
 	[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] || zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+	git -C "$DOTFILES_DIR" submodule update --init --recursive
 	stow -d "$DOTFILES_DIR" mise -t ~
 	stow -d "$DOTFILES_DIR" wezterm -t ~
 	stow -d "$DOTFILES_DIR" colorscheme -t ~
 	stow -d "$DOTFILES_DIR" nvim -t ~
 	stow -d "$DOTFILES_DIR" karabiner -t ~
+	stow -d "$DOTFILES_DIR" codex -t ~
+	stow -d "$DOTFILES_DIR" agents -t ~
   rm -rf ~/.zshrc
 	stow -d "$DOTFILES_DIR" zsh -t ~
   rm -rf ~/.config/television

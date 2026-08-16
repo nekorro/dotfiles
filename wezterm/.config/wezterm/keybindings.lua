@@ -92,6 +92,8 @@ local keys = {
 		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{ key = "Tab", mods = "SHIFT", action = act.ActivatePaneDirection("Next") },
+	{ key = "Enter", mods = "OPT", action = act.SendString("\x1b\r") },
+	{ key = "Enter", mods = "SHIFT", action = act.SendString("\x1b[13;2u") },
 }
 
 -- Key Tables

@@ -4,3 +4,9 @@
 [submodule "colorscheme/.config/colorscheme"]
 	path = colorscheme/.config/colorscheme
 	url = git@github.com:nekorro/kanagawa-paper.nvim.git
+[submodule "sources/Claude-ast-index-search"]
+	path = sources/Claude-ast-index-search
+	url = https://github.com/defendend/Claude-ast-index-search
+[submodule "sources/obsidian-memory-skill"]
+	path = sources/obsidian-memory-skill
+	url = https://github.com/nekorro/obsidian-memory-skill.git

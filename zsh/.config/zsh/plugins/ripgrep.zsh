@@ -1,1 +1,1 @@
-alias grep=rg
+alias rgrep=rg

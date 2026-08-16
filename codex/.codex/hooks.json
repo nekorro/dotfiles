@@ -1,0 +1,29 @@
+{
+  "description": "Compatible PreToolUse policies migrated from Claude Code.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^Bash$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/bash \"$HOME/.codex/hooks/block-arcadia-reads.sh\"",
+            "timeout": 5,
+            "statusMessage": "Checking Arcadia path policy"
+          }
+        ]
+      },
+      {
+        "matcher": "^Bash$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/bash \"$HOME/.codex/hooks/block-find-grep.sh\"",
+            "timeout": 5,
+            "statusMessage": "Checking Arcadia search policy"
+          }
+        ]
+      }
+    ]
+  }
+}

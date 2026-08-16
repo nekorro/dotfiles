@@ -1,0 +1,68 @@
+# Appearance
+font-family = FiraCode Nerd Font
+font-size = 14
+cursor-style-blink = false
+theme = kanagawa-paper-ash
+
+# Terminal behavior
+scrollback-limit = 10000000
+shell-integration = detect
+macos-option-as-alt = true
+confirm-close-surface = true
+copy-on-select = clipboard
+
+# Global bindings
+keybind = ctrl+s>c=new_tab
+keybind = ctrl+s>w=activate_key_table:window
+keybind = ctrl+s>s=start_search
+keybind = shift+tab=goto_split:next
+keybind = alt+enter=text:\x1b\r
+keybind = shift+enter=text:\x0a
+keybind = alt+arrow_left=esc:b
+keybind = alt+arrow_right=esc:f
+
+# Persistent window mode
+keybind = window/h=goto_split:left
+keybind = window/arrow_left=goto_split:left
+keybind = window/j=goto_split:down
+keybind = window/arrow_down=goto_split:down
+keybind = window/k=goto_split:up
+keybind = window/arrow_up=goto_split:up
+keybind = window/l=goto_split:right
+keybind = window/arrow_right=goto_split:right
+
+keybind = window/shift+h=resize_split:left,10
+keybind = window/shift+arrow_left=resize_split:left,10
+keybind = window/shift+j=resize_split:down,10
+keybind = window/shift+arrow_down=resize_split:down,10
+keybind = window/shift+k=resize_split:up,10
+keybind = window/shift+arrow_up=resize_split:up,10
+keybind = window/shift+l=resize_split:right,10
+keybind = window/shift+arrow_right=resize_split:right,10
+
+keybind = window/shift+quote=new_split:down
+keybind = window/quote=new_split:right
+keybind = window/c=new_tab
+keybind = window/w=toggle_command_palette
+keybind = window/r=prompt_tab_title
+keybind = window/x=close_tab:this
+keybind = window/shift+x=close_tab:this
+
+keybind = window/[=previous_tab
+keybind = window/shift+tab=previous_tab
+keybind = window/]=next_tab
+keybind = window/tab=next_tab
+keybind = window/1=goto_tab:1
+keybind = window/2=goto_tab:2
+keybind = window/3=goto_tab:3
+keybind = window/4=goto_tab:4
+keybind = window/5=goto_tab:5
+keybind = window/6=goto_tab:6
+keybind = window/7=goto_tab:7
+keybind = window/8=goto_tab:8
+keybind = window/9=goto_tab:9
+keybind = window/0=goto_tab:10
+
+keybind = window/escape=deactivate_key_table
+keybind = window/enter=deactivate_key_table
+keybind = window/catch_all=ignore

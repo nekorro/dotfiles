@@ -13,5 +13,12 @@ eza = "latest"
 stylua = "latest"
 zoxide = "latest"
 bat = "latest"
+shfmt = "latest"
+uv = "latest"
+yq = "latest"
+gh = "latest"
+
+[settings]
+python.uv_venv_auto = "create|source"
 
 # mise use -g
