@@ -10,3 +10,6 @@
 [submodule "sources/obsidian-memory-skill"]
 	path = sources/obsidian-memory-skill
 	url = https://github.com/nekorro/obsidian-memory-skill.git
+[submodule "sources/pi-agent-config"]
+	path = sources/pi-agent-config
+	url = git@github.com:nekorro/pi-agent-config.git

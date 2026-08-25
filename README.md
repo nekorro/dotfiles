@@ -12,7 +12,7 @@ At minimum, a new machine needs:
 - Bash and Zsh;
 - network access for package managers, Mise, Zap, and Git submodules;
 - Homebrew on macOS, or APT on Debian/Ubuntu Linux;
-- GitHub SSH access for this repository and the `nvim` and `colorscheme` submodules.
+- GitHub SSH access for this repository and the private `nvim`, `colorscheme`, and `pi-agent-config` submodules.
 
 Some packages have additional runtime dependencies:
 
@@ -57,7 +57,7 @@ Back up those two paths before running the full installer on an existing machine
 The installer currently Stows:
 
 ```text
-mise wezterm colorscheme nvim karabiner codex agents zsh television
+mise wezterm colorscheme nvim karabiner codex agents pi-agent zsh television
 ```
 
 Ghostty is intentionally installed manually so it can coexist with WezTerm.
@@ -75,7 +75,8 @@ dotfiles/
 ├── karabiner/    # Karabiner-Elements config
 ├── mise/         # language and CLI tool versions
 ├── nvim/         # Neovim config submodule
-├── sources/      # source repositories used by shared skills
+├── pi-agent/     # Stow links for portable Pi agent configuration
+├── sources/      # source repositories used by shared skills and Pi config
 ├── television/   # Television config and cable channels
 ├── wezterm/      # WezTerm config
 ├── zsh/          # .zshrc and shell plugins
@@ -99,6 +100,7 @@ For example, Stowing `ghostty` links `ghostty/.config/ghostty` into `~/.config/g
 | `karabiner` | `~/.config/karabiner` | Karabiner-Elements profiles and local automatic backups. |
 | `codex` | selected paths under `~/.codex` | Portable Codex configuration, instructions, hooks, MCP launcher, and the personal `commit` skill. |
 | `agents` | `~/AGENTS.md`, selected paths under `~/.agents/skills` | Global agent instructions plus exactly `ast-index`, `external-memory`, and `handoff`. |
+| `pi-agent` | selected files under `~/.pi/agent` | Stow wrapper around the private `sources/pi-agent-config` submodule; excludes authentication and runtime state. |
 
 ### Zsh helpers
 
@@ -179,6 +181,12 @@ The Agents package manages `~/AGENTS.md` with global execution-routing and exter
 
 The first two source repositories are Git submodules. Relative links inside the Stow package expose only their nested skill directories. Every other entry under `~/.agents/skills`, including machine-specific and Arcadia-provided skills, remains local and is not owned by Stow.
 
+### Pi agent configuration
+
+The `pi-agent` package links the portable configuration from the private `sources/pi-agent-config` submodule into `~/.pi/agent`: `settings.json`, `models.json`, and `extensions/subagent/config.json`. Authentication, sessions, logs, package checkouts, caches, and artifacts remain machine-local and are never managed by Stow.
+
+After cloning on a new machine, initialize submodules before Stowing the package. Authenticate providers separately with Pi's `/login`, then run `/reload`, `/subagents-doctor`, and `/subagents-models`. Update the private configuration snapshot through its own `scripts/sync.sh`; review and commit the submodule changes before updating the gitlink in this repository.
+
 ## Manual Stow usage
 
 Run Stow from any directory by specifying the repository and home targets explicitly.
@@ -193,13 +201,13 @@ stow --no --verbose=2 -d ~/dotfiles -t ~ ghostty
 
 ```bash
 stow -d ~/dotfiles -t ~ ghostty
-stow -d ~/dotfiles -t ~ codex agents
+stow -d ~/dotfiles -t ~ codex agents pi-agent
 ```
 
 ### Reconcile links after changing a package
 
 ```bash
-stow --restow -d ~/dotfiles -t ~ codex agents
+stow --restow -d ~/dotfiles -t ~ codex agents pi-agent
 ```
 
 ### Remove managed links
@@ -240,7 +248,7 @@ Other machine-local examples include Codex authentication/runtime state, agent s
 ```bash
 git -C ~/dotfiles pull --ff-only
 git -C ~/dotfiles submodule update --init --recursive
-stow --restow -d ~/dotfiles -t ~ mise wezterm colorscheme nvim karabiner codex agents zsh television
+stow --restow -d ~/dotfiles -t ~ mise wezterm colorscheme nvim karabiner codex agents pi-agent zsh television
 ```
 
 Restow Ghostty separately if it is enabled:

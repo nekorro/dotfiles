@@ -54,6 +54,7 @@ install_tools() {
 	stow -d "$DOTFILES_DIR" karabiner -t ~
 	stow -d "$DOTFILES_DIR" codex -t ~
 	stow -d "$DOTFILES_DIR" agents -t ~
+	stow -d "$DOTFILES_DIR" pi-agent -t ~
   rm -rf ~/.zshrc
 	stow -d "$DOTFILES_DIR" zsh -t ~
   rm -rf ~/.config/television
