@@ -68,7 +68,7 @@ Each top-level Stow package mirrors its final path relative to `$HOME`:
 
 ```text
 dotfiles/
-├── agents/       # selected shared skills under ~/.agents/skills
+├── agents/       # ~/AGENTS.md and selected shared skills under ~/.agents/skills
 ├── codex/        # portable, user-authored parts of ~/.codex
 ├── colorscheme/  # kanagawa-paper.nvim submodule
 ├── ghostty/      # Ghostty config and theme
@@ -98,7 +98,7 @@ For example, Stowing `ghostty` links `ghostty/.config/ghostty` into `~/.config/g
 | `television` | `~/.config/television` | Television configuration plus cable channels for files, Git, containers, packages, histories, and other selectors. |
 | `karabiner` | `~/.config/karabiner` | Karabiner-Elements profiles and local automatic backups. |
 | `codex` | selected paths under `~/.codex` | Portable Codex configuration, instructions, hooks, MCP launcher, and the personal `commit` skill. |
-| `agents` | selected paths under `~/.agents/skills` | Exactly `ast-index`, `external-memory`, and `handoff`. |
+| `agents` | `~/AGENTS.md`, selected paths under `~/.agents/skills` | Global agent instructions plus exactly `ast-index`, `external-memory`, and `handoff`. |
 
 ### Zsh helpers
 
@@ -169,9 +169,9 @@ The package deliberately excludes machine/runtime state, including:
 
 The defensive `codex/.codex/.gitignore` allowlists only the portable paths.
 
-### Shared agent skills
+### Shared agent instructions and skills
 
-The Agents package manages exactly three entries under `~/.agents/skills`:
+The Agents package manages `~/AGENTS.md` with global execution-routing and external-memory instructions. It also manages exactly three entries under `~/.agents/skills`:
 
 - `ast-index` — exposed from `sources/Claude-ast-index-search`;
 - `external-memory` — exposed from `sources/obsidian-memory-skill`;
