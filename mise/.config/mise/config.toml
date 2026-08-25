@@ -1,8 +1,6 @@
 [tools]
 # Languages
-rust = "1.94"
 python = "3.14"
-go = "1.26.1"
 node = "25.8.2"
 
 # Tools
@@ -17,6 +15,10 @@ shfmt = "latest"
 uv = "latest"
 yq = "latest"
 gh = "latest"
+shellcheck = "latest"
+
+# Agents
+pi = "latest"
 
 [settings]
 python.uv_venv_auto = "create|source"

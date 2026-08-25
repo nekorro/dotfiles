@@ -7,6 +7,8 @@ approvals_reviewer = "auto_review"
 default_permissions = "claude-migrated"
 service_tier = "default"
 
+notify = ["/Users/nekorro/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+
 [features]
 hooks = true
 js_repl = false
@@ -56,6 +58,111 @@ dangerously_allow_all_unix_sockets = true
 command = "/bin/sh"
 args = ["-c", 'exec "$HOME/.codex/mcp/smart-connections.sh"']
 
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/nekorro/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+CODEX_HOME = "/Users/nekorro/.codex"
+BROWSER_USE_AVAILABLE_BACKENDS = "iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.814.41407"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/nekorro/.codex/plugins/cache/openai-bundled/browser/26.814.41407/scripts/browser-service.mjs"}'
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+
 [desktop]
 followUpQueueMode = "queue"
 conversationDetailMode = "STEPS_PROSE"
+
+[projects."/Users/nekorro/arcadia/yandex360/sre/tools/maniac"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/yandex360/sre/infra/terraform/sepepersonal/mdb/calendarmetabase/postgres-sharded/calendardb_prod_pgcluster"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/yandex360/frontend/services/disk-client/infractl/disk-web-client"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/yandex360/frontend/services/disk-public/infractl/disk-web-public/testing-based/testing"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/mail/calendar"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia1/mail/search/mail/tupita"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/mail/search/mail/tupita"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/yandex360/frontend/services/disk-public/infractl/disk-web-public"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/yandex360/sre/docs/search360_sre/services"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/.agents/skills"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/yandex360/frontend/services/disk-client/infractl"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/yandex360/frontend/services/disk-client"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/yandex360/frontend/services/disk-public"]
+trust_level = "trusted"
+
+[projects."/Users/nekorro/arcadia/yandex360/frontend/services/disk-public/infractl"]
+trust_level = "trusted"
+
+[hooks.state]
+
+[hooks.state."/Users/nekorro/.codex/hooks.json:pre_tool_use:0:0"]
+trusted_hash = "sha256:3678ec59e47a09cc9ff28741ea0a289d3604de67669db8506cdeedf70387554c"
+
+[hooks.state."/Users/nekorro/.codex/hooks.json:pre_tool_use:1:0"]
+trusted_hash = "sha256:88937e5ff89764d5d81306f0cc45002ff6254981372fad5631914a5af9a0c591"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-08-19T11:11:23Z"
+source_type = "local"
+source = "/Users/nekorro/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-08-19T11:12:51Z"
+source_type = "local"
+source = "/Users/nekorro/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
