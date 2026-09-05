@@ -3,6 +3,10 @@
 # External memory
 Accumulated engineering knowledge lives in the Obsidian vault. Work with it via the `external-memory` skill.
 
+# Agent artifacts
+
+Do not store agent artifacts in project directories, including plans, Superpowers workdocs, and subagent files. Save useful artifacts to `/agents` in Obsidian and temporary artifacts to the system temporary directory.
+
 # Execution routing
 
 Default to inline execution in the parent session for ordinary, well-scoped, quick work. This includes tasks with clear requirements, a bounded change surface, one primary subsystem, inexpensive validation, and no unresolved product, architecture, security, or release decision. A task does not require subagents merely because it has several steps, creates a small repository, includes tests, or could receive a review.

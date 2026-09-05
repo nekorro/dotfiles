@@ -70,11 +70,16 @@ NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/nekorro/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 CODEX_HOME = "/Users/nekorro/.codex"
 BROWSER_USE_AVAILABLE_BACKENDS = "iab"
+BROWSER_USE_TINYSKY_ENABLED = "0"
 NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.814.41407"
-NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/nekorro/.codex/plugins/cache/openai-bundled/browser/26.814.41407/scripts/browser-service.mjs"}'
+BROWSER_USE_CODEX_APP_VERSION = "26.825.32147"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/nekorro/.codex/plugins/cache/openai-bundled/browser/26.825.32147/scripts/browser-service.mjs"}'
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+
+[mcp_servers.cua_repl]
+command = "/Applications/ChatGPT.app/Contents/MacOS/ChatGPT"
+enabled = false
 
 [desktop]
 followUpQueueMode = "queue"
@@ -131,12 +136,10 @@ trusted_hash = "sha256:3678ec59e47a09cc9ff28741ea0a289d3604de67669db8506cdeedf70
 trusted_hash = "sha256:88937e5ff89764d5d81306f0cc45002ff6254981372fad5631914a5af9a0c591"
 
 [marketplaces.openai-bundled]
-last_updated = "2026-08-19T11:11:23Z"
 source_type = "local"
 source = "/Users/nekorro/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
 [marketplaces.openai-primary-runtime]
-last_updated = "2026-08-19T11:12:51Z"
 source_type = "local"
 source = "/Users/nekorro/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
